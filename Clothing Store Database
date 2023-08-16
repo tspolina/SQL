@@ -1,0 +1,28 @@
+-- PROJECT: Create a store. 
+
+-- 1. Create a Table with 5 columns of data.
+CREATE TABLE clothing_store (
+    id INTEGER PRIMARY KEY, 
+    name TEXT, 
+    quantity INTEGER,
+    price INTEGER, 
+    aisle INTEGER
+);
+
+-- 2. Add data to the table.
+INSERT INTO clothing_store VALUES (1, "shirts", 5, 9, 2); 
+INSERT INTO clothing_store VALUES (2, "pants", 5, 12, 3);
+INSERT INTO clothing_store VALUES (3, "jackets", 5, 20, 2);
+INSERT INTO clothing_store VALUES (4, "hats", 5, 4, 5);
+
+
+-- 3. Select all items the store sells.
+SELECT * FROM clothing_store;
+
+
+-- 4. Order items by price.
+SELECT * FROM clothing_store ORDER BY price;
+
+
+-- 5. Show a statistic about the items. Here we are calculating the number of items the store offers.
+SELECT SUM(quantity) FROM clothing_store;
