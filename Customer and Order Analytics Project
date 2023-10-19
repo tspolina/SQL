@@ -5,7 +5,7 @@ In this project, I am querying a database with multiple tables containing custom
 SELECT COUNT(orderID)
 FROM BIT_DB.JanSales
 WHERE length(orderID) = 6
-AND orderid <> 'Order ID';
+AND orderid <> 'Order ID'; 
 
 /* How many of those were for iPhone? */
 
