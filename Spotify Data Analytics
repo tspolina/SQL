@@ -1,0 +1,27 @@
+For this project, I downloaded Spotify data from Kaggle, added data to SQLite Studio and explored the data using SQL. 
+
+/* 1. What's the average danceability by artist and track? */
+
+SELECT artist_name, track_name, avg(danceability) AS 'Average Danceability' 
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name, track_name;
+
+/* 2. Who are top 10 artists based on popularity? */
+
+SELECT track_name, artist_name, popularity
+FROM BIT_DB.Spotifydata
+ORDER BY popularity DESC
+LIMIT 10;
+
+/* 3. What artist released the longest song? */
+
+SELECT track_name, duration_ms
+FROM BIT_DB.Spotifydata
+ORDER BY duration_ms DESC;
+
+/* 4. What is the average danceability for 10 most popular songs? */
+
+SELECT AVG(danceability)
+FROM BIT_DB.Spotifydata
+ORDER BY popularity DESC
+LIMIT 10;
